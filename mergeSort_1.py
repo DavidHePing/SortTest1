@@ -3,7 +3,9 @@ def mergeSort(arr: list, start: int, end: int) -> list:
         return [arr[start]]
     
     if end - start == 1:
-        return [arr[start], arr[end]]
+        bigger = max(arr[start], arr[end])
+        smaller = min(arr[start], arr[end])
+        return [smaller, bigger]
     
     mid = start + (end - start) // 2
     left_ary = mergeSort(arr, start, mid)
@@ -29,6 +31,8 @@ def mergeSort(arr: list, start: int, end: int) -> list:
         result.append(right_ary[right])
         right += 1
 
+    # print(left_ary, right_ary)
+    # print(result)
     return result
 
 l1 = [0, 6, 73, 18, 84, 81, 57, 77, 83, 78, 71, 67, 36, 93, 93, 33, 70, 100, 84, 64]
