@@ -9,8 +9,6 @@ def mergeSort(arr: list, start: int, end: int) -> list:
     left_ary = mergeSort(arr, start, mid)
     right_ary = mergeSort(arr, mid + 1, end)
 
-    return left_ary + right_ary
-
     left = 0
     right = 0    
     result = []
