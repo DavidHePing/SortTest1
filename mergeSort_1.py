@@ -1,5 +1,8 @@
 def mergeSort(arr: list, start: int, end: int) -> list:
-    if start >= end:
+    if start > end:
+        return []
+
+    if start == end:
         return [arr[start]]
     
     if end - start == 1:
