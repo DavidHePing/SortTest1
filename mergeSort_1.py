@@ -5,11 +5,6 @@ def mergeSort(arr: list, start: int, end: int) -> list:
     if start == end:
         return [arr[start]]
     
-    if end - start == 1:
-        bigger = max(arr[start], arr[end])
-        smaller = min(arr[start], arr[end])
-        return [smaller, bigger]
-    
     mid = start + (end - start) // 2
     left_ary = mergeSort(arr, start, mid)
     right_ary = mergeSort(arr, mid + 1, end)
